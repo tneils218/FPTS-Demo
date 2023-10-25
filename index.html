@@ -17,38 +17,56 @@
         </button>
         <button onclick="openCommand(event,'matched')">Lệnh đã khớp</button>
       </section>
-      <section class="table__header">
-        <button onclick="openBuyorSell(event,'buy')">Buy</button>
-        <button onclick="openBuyorSell(event,'sell')">Sell</button>
-      </section>
 
       <section class="table__wait__match command" id="setCommand">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-weight: bold">Cash Balance</td>
-              <td style="font-weight: bold">1,000,000,000</td>
-            </tr>
-            <tr>
-              <td>Ceiling</td>
-              <td>45,000</td>
-            </tr>
-            <tr>
-              <td>Ref</td>
-              <td>40,000</td>
-            </tr>
-            <tr>
-              <td>Floor</td>
-              <td>35,000</td>
-            </tr>
-          </tbody>
-        </table>
+        <section class="table__header">
+          <button onclick="openBuyorSell(event,'buy')">Buy</button>
+          <button onclick="openBuyorSell(event,'sell')">Sell</button>
+        </section>
+        <div id="buy" class="pay">
+          <table>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold">Cash Balance</td>
+                <td style="font-weight: bold">1,000,000,000</td>
+              </tr>
+              <tr>
+                <td>Ceiling</td>
+                <td>45,000</td>
+              </tr>
+              <tr>
+                <td>Ref</td>
+                <td>40,000</td>
+              </tr>
+              <tr>
+                <td>Floor</td>
+                <td>35,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="sell" class="pay" style="display: none">
+          <table>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold">Cash Balance1</td>
+                <td style="font-weight: bold">1,000,000,000</td>
+              </tr>
+              <tr>
+                <td>Ceiling</td>
+                <td>45,000</td>
+              </tr>
+              <tr>
+                <td>Ref</td>
+                <td>40,000</td>
+              </tr>
+              <tr>
+                <td>Floor</td>
+                <td>35,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       <section
         class="table__body command"
@@ -167,9 +185,9 @@
       ></section>
     </main>
     <script>
-      function openBuyorSell(evt, cityName) {
+      function openBuyorSell(evt, payName) {
         var i, x, tablinks;
-        x = document.getElementsByClassName("city");
+        x = document.getElementsByClassName("pay");
         for (i = 0; i < x.length; i++) {
           x[i].style.display = "none";
         }
@@ -177,7 +195,7 @@
         //   for (i = 0; i < x.length; i++) {
         //     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
         //   }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(payName).style.display = "block";
         //   evt.currentTarget.className += " w3-red";
       }
       function openCommand(evt, commandName) {
