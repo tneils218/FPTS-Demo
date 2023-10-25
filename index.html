@@ -213,7 +213,7 @@
             Sell
           </button>
         </section>
-        <div id="buy2" class="pay2">
+        <div id="buy2" class="matched pay2">
           <table>
             <tbody>
               <tr>
@@ -235,7 +235,7 @@
             </tbody>
           </table>
         </div>
-        <div id="sell2" class="pay2" style="display: none">
+        <div id="sell2" class="matched pay2" style="display: none">
           <table>
             <tbody>
               <tr>
@@ -266,7 +266,6 @@
         for (i = 0; i < x.length; i++) {
           x[i].style.display = "none";
         }
-        var option = evt.target.getAttribute("data-option");
         document.getElementById(payName).style.display = "block";
       }
       function openBuyorSell2(evt, payName) {
@@ -275,7 +274,6 @@
         for (i = 0; i < x.length; i++) {
           x[i].style.display = "none";
         }
-        var option = evt.target.getAttribute("data-option");
         document.getElementById(payName).style.display = "block";
       }
 
