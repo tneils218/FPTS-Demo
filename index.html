@@ -21,7 +21,40 @@
         <button onclick="openBuyorSell(event,'buy')">Buy</button>
         <button onclick="openBuyorSell(event,'sell')">Sell</button>
       </section>
-      <section class="table__body command" id="waitForMatch">
+
+      <section class="table__wait__match command" id="setCommand">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: bold">Cash Balance</td>
+              <td style="font-weight: bold">1,000,000,000</td>
+            </tr>
+            <tr>
+              <td>Ceiling</td>
+              <td>45,000</td>
+            </tr>
+            <tr>
+              <td>Ref</td>
+              <td>40,000</td>
+            </tr>
+            <tr>
+              <td>Floor</td>
+              <td>35,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section
+        class="table__body command"
+        id="waitForMatch"
+        style="display: none"
+      >
         <table>
           <thead>
             <tr>
@@ -129,12 +162,7 @@
       </section>
       <section
         class="table__body command"
-        id="Paris"
-        style="display: none"
-      ></section>
-      <section
-        class="table__body command"
-        id="Tokyo"
+        id="mached"
         style="display: none"
       ></section>
     </main>
