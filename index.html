@@ -11,11 +11,17 @@
   <body>
     <main class="table">
       <section class="table__header">
-        <button onclick="openCity(event,'London')">London</button>
-        <button onclick="openCity(event,'Paris')">Paris</button>
-        <button onclick="openCity(event,'Tokyo')">Tokyo</button>
+        <button onclick="openCommand(event,'setCommand')">Đặt lệnh</button>
+        <button onclick="openCommand(event,'waitForMatch')">
+          Lệnh chờ khớp
+        </button>
+        <button onclick="openCommand(event,'matched')">Lệnh đã khớp</button>
       </section>
-      <section class="table__body city" id="London">
+      <section class="table__header">
+        <button onclick="openBuyorSell(event,'buy')">Buy</button>
+        <button onclick="openBuyorSell(event,'sell')">Sell</button>
+      </section>
+      <section class="table__body command" id="waitForMatch">
         <table>
           <thead>
             <tr>
@@ -122,18 +128,18 @@
         </table>
       </section>
       <section
-        class="table__body city"
+        class="table__body command"
         id="Paris"
         style="display: none"
       ></section>
       <section
-        class="table__body city"
+        class="table__body command"
         id="Tokyo"
         style="display: none"
       ></section>
     </main>
     <script>
-      function openCity(evt, cityName) {
+      function openBuyorSell(evt, cityName) {
         var i, x, tablinks;
         x = document.getElementsByClassName("city");
         for (i = 0; i < x.length; i++) {
@@ -144,6 +150,19 @@
         //     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
         //   }
         document.getElementById(cityName).style.display = "block";
+        //   evt.currentTarget.className += " w3-red";
+      }
+      function openCommand(evt, commandName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("command");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        //   tablinks = document.getElementsByClassName("tablink");
+        //   for (i = 0; i < x.length; i++) {
+        //     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        //   }
+        document.getElementById(commandName).style.display = "block";
         //   evt.currentTarget.className += " w3-red";
       }
     </script>
