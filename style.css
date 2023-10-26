@@ -51,12 +51,15 @@ main.table {
   float: left;
 }
 
-.table__body .table__wait__match::-webkit-scrollbar {
+.table__body .table__wait__match {
   width: 0.5rem;
   height: 0.5rem;
+  scrollbar-width: thin; /* Thuộc tính này dành cho trình duyệt không hỗ trợ -webkit-scrollbar */
 }
 
 .table__body .table__wait__match::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 0.5rem;
   background-color: #0004;
   visibility: hidden;
@@ -65,6 +68,7 @@ main.table {
 .table__body .table__wait__match:hover::-webkit-scrollbar-thumb {
   visibility: visible;
 }
+
 
 table {
   width: 100%;
@@ -77,10 +81,7 @@ td {
   padding: 1rem;
   text-align: left;
 }
-#buy table td,
-#sell table td {
-  width: 50%; /* Điều chỉnh giá trị padding để làm cho các ô cách nhau gần hơn */
-}
+
 .border-line {
   width: 100%;
   height: 40px;
@@ -121,16 +122,14 @@ tbody tr.hide td p {
   font: 0 / 0 sans-serif;
   transition: 0.2s ease-in-out 0.5s;
 }
-/* #status {
-  text-align: center;
-} */
+
 .status {
   padding: 0.4rem 0;
   border-radius: 2rem;
   text-align: center;
 }
 
-.status.delivered {
+.status.success {
   background-color: #86e49d;
   color: #006b21;
 }
@@ -162,18 +161,11 @@ thead th.active,
 tbody td.active {
   color: #6c00bd;
 }
-#buy table tr:first-child td,
-#sell table tr:first-child td {
-  padding-top: 0.3rem; /* Điều chỉnh giá trị padding cho hàng đầu tiên của bảng Buy và Sell */
-}
+
 .form-container {
   text-align: center;
   margin: 0 auto;
   width: 500px;
-  /* display: flex;
-  padding-top: 30px;
-  justify-content: center;
-  gap: 20px; */
 }
 
 .form-group {
@@ -198,3 +190,36 @@ tbody td.active {
   padding: 5px;
   text-align: center;
 }
+
+#buy table td,
+#buy2 table td,
+#sell table td,
+#sell2 table td {
+  width: 50%;
+}
+
+#buy table tr:first-child td,
+#buy2 table tr:first-child td,
+#sell table tr:first-child td,
+#sell2 table tr:first-child td {
+  padding-top: 0.3rem;
+}
+
+#buy2 table {
+  width: 100%; /* Đảm bảo bảng "Buy2" rộng 100% */
+  table-layout: fixed; /* Đảm bảo cố định chiều rộng của cột */
+}
+
+
+#buy2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%; /* Điều chỉnh kích thước bảng "Buy2" */
+}
+
+#sell2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%; /* Điều chỉnh kích thước bảng "Sell2" */
+}
+

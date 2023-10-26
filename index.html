@@ -141,7 +141,7 @@
             <td>BUY</td>
             <td>100</td>
             <td>150,000</td>
-            <td><p class="status delivered">Success</p></td>
+            <td><p class="status success">Success</p></td>
             <td>2023-10-25 09:52:12</td>
             <td>58001234</td>
           </tr>
@@ -151,7 +151,7 @@
             <td>BUY</td>
             <td>100</td>
             <td>150,000</td>
-            <td><p class="status delivered">Success</p></td>
+            <td><p class="status success">Success</p></td>
             <td>2023-10-25 09:52:12</td>
             <td>58001234</td>
           </tr>
@@ -161,7 +161,7 @@
             <td>BUY</td>
             <td>100</td>
             <td>150,000</td>
-            <td><p class="status delivered">Success</p></td>
+            <td><p class="status success">Success</p></td>
             <td>2023-10-25 09:52:12</td>
             <td>58001234</td>
           </tr>
@@ -169,7 +169,7 @@
       </table>
       </section>
       <section
-        class="table__wait__match command"
+        class="table__body command"
         id="matched"
         style="display: none"
       >
@@ -189,29 +189,55 @@
             Sell
           </button>
         </section>
-        <div id="buy2" class="matched pay2">
+        <section id="buy2" class="matched buy2 pay2">
           <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Symbol</th>
+                <th>BuySell</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>DateTime</th>
+                <th>ExID</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <td style="font-weight: bold">Cash Balance4</td>
-                <td style="font-weight: bold">1,000,000,000</td>
+                <td>1234</td>
+                <td>FPT</td>
+                <td>BUY</td>
+                <td>100</td>
+                <td>150,000</td>
+                <td><p class="status success">Success</p></td>
+                <td>2023-10-25 09:52:12</td>
+                <td>58001234</td>
               </tr>
               <tr>
-                <td>Ceiling</td>
-                <td>45,000</td>
+                <td>1234</td>
+                <td>FPT</td>
+                <td>BUY</td>
+                <td>100</td>
+                <td>150,000</td>
+                <td><p class="status success">Success</p></td>
+                <td>2023-10-25 09:52:12</td>
+                <td>58001234</td>
               </tr>
               <tr>
-                <td>Ref</td>
-                <td>40,000</td>
-              </tr>
-              <tr>
-                <td>Floor</td>
-                <td>35,000</td>
+                <td>1234</td>
+                <td>FPT</td>
+                <td>BUY</td>
+                <td>100</td>
+                <td>150,000</td>
+                <td><p class="status success">Success</p></td>
+                <td>2023-10-25 09:52:12</td>
+                <td>58001234</td>
               </tr>
             </tbody>
           </table>
-        </div>
-        <div id="sell2" class="matched pay2" style="display: none">
+        </section>
+        <section id="sell2" class="matched sell2 pay2" style="display: none">
           <table>
             <tbody>
               <tr>
@@ -232,7 +258,7 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </section>
       </section>
     </main>
     <script>
