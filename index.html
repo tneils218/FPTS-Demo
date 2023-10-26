@@ -35,7 +35,8 @@
             Sell
           </button>
         </section>
-        <div id="buy" class="table__wait__match pay">
+        <div class="border-line"></div>
+        <div id="buy" class="pay">
           <table>
             <tbody>
               <tr>
@@ -56,13 +57,30 @@
               </tr>
             </tbody>
           </table>
+          <div class="form-container">
+            <form>
+              <div class="form-group">
+                <label for="symbol" class="form-label">Symbol</label>
+                <input type="text" id="symbol" class="form-input" value="FPT">
+              </div>
+              <div class="form-group">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" id="quantity" class="form-input" value="100">
+              </div>
+              <div class="form-group">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" id="price" class="form-input" value="41500">
+              </div>
+              <button type="submit" class="form-button">Send</button>
+            </form>
+          </div>
         </div>
-        <div id="sell" class="table__wait__match pay" style="display: none">
+        <div id="sell" class="pay" style="display: none">
           <table>
             <tbody>
               <tr>
-                <td style="font-weight: bold">Cash Balance1</td>
-                <td style="font-weight: bold">1,000,000,000</td>
+                <td style="font-weight: bold">Stock Balance</td>
+                <td style="font-weight: bold">15,000</td>
               </tr>
               <tr>
                 <td>Ceiling</td>
@@ -78,6 +96,24 @@
               </tr>
             </tbody>
           </table>
+          <div class="form-container">
+            <form>
+              <div class="form-group">
+                <label for="symbol" class="form-label">Symbol</label>
+                <input type="text" id="symbol" class="form-input" value="FPT">
+              </div>
+              <div class="form-group">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" id="quantity" class="form-input" value="100">
+              </div>
+              <div class="form-group">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" id="price" class="form-input" value="41500">
+              </div>
+              <button type="submit" class="form-button">Send</button>
+            </form>
+          </div>
+        </div>
         </div>
       </section>
       <section

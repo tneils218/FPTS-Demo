@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -48,22 +47,22 @@ main.table {
 }
 
 .table__wait__match table {
-  width: 50%; /* Đặt chiều rộng của bảng là 50% */
-  float: left; /* Sử dụng float để đặt các bảng cạnh nhau */
+  width: 50%; 
+  float: left; 
 }
 
-.table__body::-webkit-scrollbar {
+.table__body .table__wait__match::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;
 }
 
-.table__body::-webkit-scrollbar-thumb {
+.table__body .table__wait__match::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   background-color: #0004;
   visibility: hidden;
 }
 
-.table__body:hover::-webkit-scrollbar-thumb {
+.table__body .table__wait__match:hover::-webkit-scrollbar-thumb {
   visibility: visible;
 }
 
@@ -79,6 +78,11 @@ td {
   text-align: left;
 }
 
+.border-line {
+  width: 100%;
+  height: 40px;
+  background-color: #d5d1defe; /* Màu đường viền tùy chỉnh ở đây */
+}
 thead th {
   position: sticky;
   top: 0;
@@ -156,4 +160,33 @@ thead th:hover {
 thead th.active,
 tbody td.active {
   color: #6c00bd;
+}
+
+.form-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.form-label {
+  flex: 1;
+  text-align: left;
+}
+
+.form-input {
+  flex: 2;
+  padding: 5px;
+  width: 100%;
+}
+
+.form-button {
+  padding: 5px;  
+  text-align: center;
 }
