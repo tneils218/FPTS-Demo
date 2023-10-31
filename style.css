@@ -210,7 +210,11 @@ tbody td.active {
   table-layout: fixed; /* Đảm bảo cố định chiều rộng của cột */
 }
 
-
+#sell2 table {
+  width: 100%; /* Đảm bảo bảng "Buy2" rộng 100% */
+  table-layout: fixed; /* Đảm bảo cố định chiều rộng của cột */
+}
+  
 #buy2 {
   display: inline-block;
   vertical-align: top;
@@ -220,7 +224,7 @@ tbody td.active {
 #sell2 {
   display: inline-block;
   vertical-align: top;
-  width: 50%; /* Điều chỉnh kích thước bảng "Sell2" */
+  width: 100%; /* Điều chỉnh kích thước bảng "Sell2" */
 }
 
 .table__header button.active {
