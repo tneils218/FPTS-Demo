@@ -11,7 +11,7 @@
   <body>
     <main class="table">
       <section class="table__header">
-        <button onclick="openCommand(event, 'setCommand')">Đặt lệnh</button>
+        <button class="active" onclick="openCommand(event, 'setCommand')">Đặt lệnh</button>
         <button onclick="openCommand(event, 'waitForMatch')">
           Lệnh chờ khớp
         </button>
@@ -21,8 +21,9 @@
       <section class="table__wait__match command" id="setCommand">
         <section class="table__header">
           <button
-            class="buy-option"
+            class="buy-option active"
             data-option="buy"
+            data-type="buy-sell" 
             onclick="openBuyorSell(event, 'buy')"
           >
             Buy
@@ -30,6 +31,7 @@
           <button
             class="sell-option"
             data-option="sell"
+            data-type="buy-sell" 
             onclick="openBuyorSell(event, 'sell')"
           >
             Sell
@@ -175,7 +177,8 @@
       >
         <section class="table__header">
           <button
-            class="buy-option"
+            class="buy-option active"
+            data-type="buy2-sell2" 
             data-option="buy2"
             onclick="openBuyorSell2(event, 'buy2')"
           >
@@ -183,6 +186,7 @@
           </button>
           <button
             class="sell-option"
+            data-type="buy2-sell2" 
             data-option="sell2"
             onclick="openBuyorSell2(event, 'sell2')"
           >
@@ -269,6 +273,11 @@
           x[i].style.display = "none";
         }
         document.getElementById(payName).style.display = "block";
+        var tablinks = document.querySelectorAll('[data-type="buy-sell"]');
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        evt.currentTarget.classList.add("active");
       }
       function openBuyorSell2(evt, payName) {
         var i, x;
@@ -277,6 +286,11 @@
           x[i].style.display = "none";
         }
         document.getElementById(payName).style.display = "block";
+        var tablinks = document.querySelectorAll('[data-type="buy2-sell2"]');
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        evt.currentTarget.classList.add("active");
       }
 
       function openCommand(evt, commandName) {
@@ -286,6 +300,11 @@
           x[i].style.display = "none";
         }
         document.getElementById(commandName).style.display = "block";
+        tablinks = document.getElementsByClassName("table__header")[0].getElementsByTagName("button");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        evt.currentTarget.classList.add("active");
       }
     </script>
   </body>

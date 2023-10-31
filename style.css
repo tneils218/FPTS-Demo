@@ -223,3 +223,7 @@ tbody td.active {
   width: 50%; /* Điều chỉnh kích thước bảng "Sell2" */
 }
 
+.table__header button.active {
+  background-color: #ff69b4; /* Pink color when selected */
+  color: white;
+}
